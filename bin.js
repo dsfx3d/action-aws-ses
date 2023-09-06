@@ -12,9 +12,9 @@ const replyTo = getInput("reply_to", {required: false});
 
 const command = new SendEmailCommand({
   Destination: {
-    ToAddresses: [to],
-    CcAddresses: cc ? [cc] : undefined,
-    BccAddresses: bcc ? [bcc] : undefined,
+    ToAddresses: to.split(","),
+    CcAddresses: cc ? cc.split(",") : undefined,
+    BccAddresses: bcc ? bcc.split(",") : undefined,
   },
   Message: {
     Subject: {

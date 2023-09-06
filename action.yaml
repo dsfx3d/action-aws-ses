@@ -1,0 +1,32 @@
+name: Send Email via AWS SES
+description: Send Email via AWS SES
+
+inputs:
+  to:
+    description: 'Email address of the recipient'
+    required: true
+  from:
+    description: 'Email address of the sender'
+    required: true
+  subject:
+    description: 'Subject of the email'
+    required: true
+  cc:
+    description: 'Email address of the CC recipient'
+    required: false
+  bcc:
+    description: 'Email address of the BCC recipient'
+    required: false
+  replyTo:
+    description: 'Email address to reply to'
+    required: false
+  body:
+    description: 'Body of the email'
+    required: false
+  bodyHtml:
+    description: 'Body of the email in HTML format'
+    required: false
+
+runs:
+  using: node16
+  main: index.js

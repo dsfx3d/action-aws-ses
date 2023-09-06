@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "",
   "main": "bin.js",
-  "scripts": {
-    "bootstrap": "pnpm update && husky install"
-  },
   "keywords": [],
   "author": "",
   "license": "MIT",
