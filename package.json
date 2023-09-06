@@ -2,7 +2,7 @@
   "name": "workspace",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "bin.js",
   "scripts": {
     "bootstrap": "pnpm update && husky install"
   },
@@ -12,6 +12,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@vercel/ncc": "^0.38.0",
     "eslint": "^8.48.0",
     "eslint-config-dsfx3d": "^0.1.5",
     "husky": "^8.0.3",
