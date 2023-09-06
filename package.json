@@ -17,5 +17,8 @@
     "husky": "^8.0.3",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.405.0"
   }
 }
