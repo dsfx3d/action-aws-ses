@@ -10,10 +10,6 @@ const replyTo = getInput("reply_to", {required: false});
 const subject = getInput("subject", {required: true});
 const to = getInput("to", {required: true});
 
-const accessKeyId = getInput("aws_access_key_id", {required: true});
-const region = getInput("aws_region", {required: true});
-const secretAccessKey = getInput("aws_secret_access_key", {required: true});
-
 const command = new SendEmailCommand({
   Destination: {
     ToAddresses: to.split(","),
@@ -42,8 +38,8 @@ const command = new SendEmailCommand({
 
 new SESClient({
   credentials: {
-    accessKeyId,
-    secretAccessKey,
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   },
-  region,
+  region: process.env.AWS_DEFAULT_REGION,
 }).send(command);
