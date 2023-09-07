@@ -1,8 +1,8 @@
 {
   "name": "action-aws-ses",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
-  "main": "bin.js",
   "keywords": [],
   "author": "",
   "license": "MIT",
