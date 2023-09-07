@@ -11,6 +11,7 @@ const bcc = getInput("bcc", {required: false});
 const replyTo = getInput("reply_to", {required: false});
 const accessKeyId = getInput("aws_access_key_id", {required: true});
 const secretAccessKey = getInput("aws_secret_access_key", {required: true});
+const region = getInput("aws_region", {required: true});
 
 const command = new SendEmailCommand({
   Destination: {
@@ -43,4 +44,5 @@ new SESClient({
     accessKeyId,
     secretAccessKey,
   },
+  region,
 }).send(command);
