@@ -2,15 +2,6 @@ name: Send Email via AWS SES
 description: Send Email via AWS SES
 
 inputs:
-  aws_access_key_id:
-    description: 'AWS Access Key ID'
-    required: true
-  aws_region:
-    description: 'AWS Region'
-    required: true
-  aws_secret_access_key:
-    description: 'AWS Secret Access Key'
-    required: true
   bcc:
     description: 'Email address of the BCC recipient'
     required: false
