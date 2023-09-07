@@ -9,6 +9,8 @@ const htmlBody = getInput("html_body", {required: false});
 const cc = getInput("cc", {required: false});
 const bcc = getInput("bcc", {required: false});
 const replyTo = getInput("reply_to", {required: false});
+const accessKeyId = getInput("aws_access_key_id", {required: true});
+const secretAccessKey = getInput("aws_secret_access_key", {required: true});
 
 const command = new SendEmailCommand({
   Destination: {
@@ -36,4 +38,9 @@ const command = new SendEmailCommand({
   ReplyToAddresses: replyTo ? [replyTo] : undefined,
 });
 
-new SESClient({}).send(command);
+new SESClient({
+  credentials: {
+    accessKeyId,
+    secretAccessKey,
+  },
+}).send(command);
