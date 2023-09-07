@@ -36,7 +36,7 @@ const command = new SendEmailCommand({
     },
   },
   Source: from,
-  ReplyToAddresses: replyTo ? [replyTo] : undefined,
+  ReplyToAddresses: replyTo ? replyTo.split(",") : undefined,
 });
 
 new SESClient({
