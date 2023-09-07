@@ -19,3 +19,20 @@
 - Yashodhan Singh Rathore <dsfx3d@gmail.com>
 
 
+
+
+## v0.1.0...v0.2.0
+
+[compare changes](https://github.com/dsfx3d/action-aws-ses/compare/v0.1.0...main)
+
+### 🚀 Enhancements
+
+- Add inputs for AWS credentials ([927caa5](https://github.com/dsfx3d/action-aws-ses/commit/927caa5))
+- Add input for AWS region ([10bbf0f](https://github.com/dsfx3d/action-aws-ses/commit/10bbf0f))
+- Allow multiple emails in reply_to input ([be33f62](https://github.com/dsfx3d/action-aws-ses/commit/be33f62))
+
+### ❤️ Contributors
+
+- Yashodhan Singh Rathore <dsfx3d@gmail.com>
+
+
