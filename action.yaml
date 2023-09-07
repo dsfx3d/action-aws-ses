@@ -2,30 +2,39 @@ name: Send Email via AWS SES
 description: Send Email via AWS SES
 
 inputs:
-  to:
-    description: 'Email address of the recipient'
+  aws_access_key_id:
+    description: 'AWS Access Key ID'
     required: true
-  from:
-    description: 'Email address of the sender'
+  aws_region:
+    description: 'AWS Region'
     required: true
-  subject:
-    description: 'Subject of the email'
+  aws_secret_access_key:
+    description: 'AWS Secret Access Key'
     required: true
-  cc:
-    description: 'Email address of the CC recipient'
-    required: false
   bcc:
     description: 'Email address of the BCC recipient'
-    required: false
-  replyTo:
-    description: 'Email address to reply to'
     required: false
   body:
     description: 'Body of the email'
     required: false
-  bodyHtml:
+  body_html:
     description: 'Body of the email in HTML format'
     required: false
+  cc:
+    description: 'Email address of the CC recipient'
+    required: false
+  from:
+    description: 'Email address of the sender'
+    required: true
+  reply_to:
+    description: 'Email address to reply to'
+    required: false
+  subject:
+    description: 'Subject of the email'
+    required: true
+  to:
+    description: 'Email address of the recipient'
+    required: true
 
 runs:
   using: node16
