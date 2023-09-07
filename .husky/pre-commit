@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-npx @vercel/ncc build bin.js -m -o . && git add index.js
