@@ -1,4 +1,4 @@
-name: Action to send email AWS SES without SMTP credentials
+name: Action to send email via AWS SES without using SMTP credentials
 description: Send Email via AWS SES
 
 inputs:
