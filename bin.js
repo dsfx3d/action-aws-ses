@@ -1,5 +1,6 @@
 import {SESClient, SendEmailCommand} from "@aws-sdk/client-ses";
 import {getInput} from "@actions/core";
+import {defaultProvider} from "@aws-sdk/credential-provider-node";
 
 const bcc = getInput("bcc", {required: false});
 const body = getInput("body", {required: false});
@@ -38,10 +39,7 @@ const command = new SendEmailCommand({
 
 export const run = () => {
   return new SESClient({
-    credentials: {
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    },
+    credentials: defaultProvider(),
     region: process.env.AWS_DEFAULT_REGION,
   }).send(command);
 };
