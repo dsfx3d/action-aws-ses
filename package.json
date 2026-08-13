@@ -9,7 +9,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.0.0",
     "@commitlint/config-conventional": "^19.0.0",
-    "@vercel/ncc": "^0.38.0",
+    "@vercel/ncc": "^0.45.0",
     "eslint": "^9.0.0",
     "eslint-config-dsfx3d": "^0.1.5",
     "husky": "^9.0.0",
